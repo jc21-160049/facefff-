@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:Xamarin"
+              x:Class="Xamarin.insert">
+
+    <ContentPage Title="入力">
+        <StackLayout>
+
+
+
+
+            <Label x:Name="aaa"
+               FontSize="35"
+               VerticalOptions="Start"></Label>
+            
+            
+            <Entry Placeholder="金額"
+                   x:Name="money"
+               FontSize="35"
+               VerticalOptions="StartAndExpand"/>
+            <Label Text="項目を選んでください"
+               FontSize="35"
+               x:Name="koumoku"></Label>
+            <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center">
+                <Button Text="食費"
+                    FontSize="25"
+                    HorizontalOptions="Start"
+                    WidthRequest="150"
+                    x:Name="b1"/>
+                <Button Text="日用品"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b2"/>
+                <Button Text="交通費"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b3"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center">
+                <Button Text="医療費"
+                    FontSize="25"
+                    HorizontalOptions="Start"
+                    WidthRequest="150"
+                    x:Name="b4"/>
+                <Button Text="光熱費"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b5"/>
+                <Button Text="美容衣服"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b6"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center">
+                <Button Text="趣味"
+                    FontSize="25"
+                    HorizontalOptions="Start"
+                    WidthRequest="150"
+                    x:Name="b7"/>
+                <Button Text="酒たばこ"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b8"/>
+                <Button Text="その他"
+                    FontSize="25"
+                    HorizontalOptions="End"
+                    WidthRequest="150"
+                    x:Name="b9"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Button Text="登録する"
+                    x:Name="touroku"
+                    WidthRequest="400"
+                    FontSize="35"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage>
+
+    <local:insert2/>
+
+</TabbedPage>

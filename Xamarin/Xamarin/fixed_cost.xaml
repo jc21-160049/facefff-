@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.fixed_cost">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="固定費"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <DatePicker />
+            <Entry Placeholder="金額" 
+                   x:Name="kingaku"/>
+            <Picker Title="項目"
+                    x:Name="koumoku"/>
+            <Button Text="登録"
+                    x:Name="touroku"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

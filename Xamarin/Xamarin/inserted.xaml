@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.inserted">
+    <StackLayout>
+        <Label x:Name="aa"
+               FontSize="35"
+               VerticalOptions="CenterAndExpand"
+               />
+        <Label Text="詳細"
+
+                       FontSize="50" VerticalOptions="Center" />
+
+        <Button Text="1day" HorizontalOptions="Center" x:Name="day_select"/>
+
+        <Button Text="1week" HorizontalOptions="Center" x:Name="week_select"/>
+
+        <Button Text="1month" HorizontalOptions="Center" x:Name="month_select"/>
+
+
+        <Label Text="総額(\)"
+                   FontSize="35"
+                   VerticalOptions="CenterAndExpand"></Label>
+        <Label x:Name="a1" />
+        <Label x:Name="a2" />
+        <Label x:Name="a3" />
+        <Label x:Name="a4" />
+        <Label x:Name="a5" />
+        <Label x:Name="a6" />
+        <Label x:Name="a7" />
+        <Label x:Name="a8" />
+        <Label x:Name="a9" />
+    </StackLayout>
+</ContentPage>

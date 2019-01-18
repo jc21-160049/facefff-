@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.often_use">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="よく使う金額設定"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="金額"
+                   x:Name="tmoney"
+               FontSize="35"
+               VerticalOptions="StartAndExpand" />
+
+            <Picker Title="項目" 
+                    SelectedItem=""
+                    x:Name="komoku1"/>
+            <Button Text="ボタンを登録" x:Name="Register" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
