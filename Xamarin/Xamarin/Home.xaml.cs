@@ -4,22 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 using XamForms.Controls;
 using PublicHoliday;
-using Xamarin.Forms.Xaml;
 using Xamarin;
 
 namespace Xamarin
 {
     public partial class Home : TabbedPage
     {
+        public static List<DateTime> ddt;
         public Home()
         {
             InitializeComponent();
             goal1();
 
-            //カレンダー祝日の設定
-            calendarrr.SpecialDates = new List<SpecialDate>{
+        //カレンダー祝日の設定
+        calendarrr.SpecialDates = new List<SpecialDate>{
             new SpecialDate(DateTime.Now)
             {
                    TextColor = Color.Green, BorderColor=Color.Green,
@@ -75,6 +76,7 @@ namespace Xamarin
             string s1 = ("今月使った金額は" + num1 + "円です");
             string s3 = ("今月使える金額は" + num3 + "円です");
             double num4 = ((double)num5 / num3)*100;
+            num4 = Math.Round(num4, 2);
             string s2 = ("目標金額の割合" + num4 + "%");
             usedmoney.Text = s1;
             ableuse.Text = s3;
@@ -135,6 +137,7 @@ namespace Xamarin
             else
             {*/
             //await this.Navigation.PushModalAsync(new inserted(calendarrr.SelectedDates));
+            Home.ddt = calendarrr.SelectedDates;
             await this.Navigation.PushModalAsync(new insert(calendarrr.SelectedDates));
             /*}*/
         }
@@ -161,6 +164,51 @@ namespace Xamarin
         private async void Button_Clicked_4(object seder, EventArgs e)
         {
             await this.Navigation.PushModalAsync(new salary());
+        }
+        private async void Button_Clicked_5(object seder, EventArgs e)
+        {
+            var result1 = await App.Database.GetItemsAsync();
+            var result2 = await App.Database1.GetItemsAsync();
+            var result3 = await App.Database2.GetItemsAsync();
+            var result4 = await App.Database3.GetItemsAsync();
+            var result5 = await App.Database4.GetItemsAsync();
+            var result6 = await App.Database5.GetItemsAsync();
+
+            foreach(var loc in result1)
+            {
+                await App.Database.DeleteItemAsync(loc);
+            }
+
+            foreach (var loc in result2)
+            {
+                await App.Database1.DeleteItemAsync(loc);
+            }
+
+            foreach (var loc in result3)
+            {
+                await App.Database2.DeleteItemAsync(loc);
+            }
+
+            foreach (var loc in result4)
+            {
+                await App.Database3.DeleteItemAsync(loc);
+            }
+
+            foreach (var loc in result5)
+            {
+                await App.Database4.DeleteItemAsync(loc);
+            }
+
+            foreach (var loc in result6)
+            {
+                await App.Database5.DeleteItemAsync(loc);
+            }
+            //alert1();
+        }
+
+        public async void alert1()
+        {
+            await DisplayAlert("初期化しました。","","");
         }
         private async void OnDateClick_detail(object sender, EventArgs e)
         {

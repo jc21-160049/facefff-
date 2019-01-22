@@ -7,14 +7,17 @@
     <ContentPage Title ="ホーム">
 
         <StackLayout>
-            <Label Text="とりあえずの初期画面" />
+            
             <Label x:Name="usedmoney"
+                   TextColor="Black"
                    FontSize="Large"
                    HorizontalOptions="Center"/>
             <Label x:Name="ableuse"
+                   TextColor="Red"
                    FontSize="Large"
                    HorizontalOptions="Center"/>
             <Label x:Name="goal"
+                   TextColor="BlueViolet"
                    FontSize="Large"
                    HorizontalOptions="Center"/>
             <controls:Calendar x:Name="calendarrr"
@@ -51,9 +54,7 @@
 
     <ContentPage Title="設定">
         <StackLayout>
-            <Label Text="とりあえず設定画面" />
-            <Button Text="通知設定" 
-                        Clicked="Button_Clicked"/>
+            <Label Text="設定画面" />
             <Button Text="よく使う金額設定" 
                         Clicked="Button_Clicked_1"/>
             <Button Text="固定費引き落とし設定"
@@ -62,7 +63,8 @@
                     Clicked="Button_Clicked_3"/>
             <Button Text="給料設定"
                     Clicked="Button_Clicked_4"/>
-            <Button Text="初期化" />
+            <Button Text="初期化"
+                    Clicked="Button_Clicked_5"/>
 
 
         </StackLayout>

@@ -5,6 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="給料の設定"
+                  FontSize="25"
+                   TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Placeholder="給料を入力" 

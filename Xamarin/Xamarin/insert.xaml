@@ -11,15 +11,18 @@
 
 
             <Label x:Name="aaa"
+                   TextColor="Black"
                FontSize="35"
                VerticalOptions="Start"></Label>
             
             
             <Entry Placeholder="金額"
+                   TextColor="Yellow"
                    x:Name="money"
                FontSize="35"
                VerticalOptions="StartAndExpand"/>
             <Label Text="項目を選んでください"
+                   TextColor="Black"
                FontSize="35"
                x:Name="koumoku"></Label>
             <StackLayout Orientation="Horizontal"

@@ -3,32 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.inserted">
     <StackLayout>
-        <Label x:Name="aa"
+        <Label x:Name="aa" TextColor="Black"
                FontSize="35"
                VerticalOptions="CenterAndExpand"
                />
-        <Label Text="詳細"
+        <Label Text="詳細" TextColor="Black"
 
                        FontSize="50" VerticalOptions="Center" />
 
+        <StackLayout Orientation="Horizontal">
         <Button Text="1day" HorizontalOptions="Center" x:Name="day_select"/>
 
         <Button Text="1week" HorizontalOptions="Center" x:Name="week_select"/>
 
         <Button Text="1month" HorizontalOptions="Center" x:Name="month_select"/>
-
+        </StackLayout>
 
         <Label Text="総額(\)"
                    FontSize="35"
-                   VerticalOptions="CenterAndExpand"></Label>
-        <Label x:Name="a1" />
-        <Label x:Name="a2" />
-        <Label x:Name="a3" />
-        <Label x:Name="a4" />
-        <Label x:Name="a5" />
-        <Label x:Name="a6" />
-        <Label x:Name="a7" />
-        <Label x:Name="a8" />
-        <Label x:Name="a9" />
+                   VerticalOptions="CenterAndExpand" TextColor="Black"></Label>
+        <Label x:Name="a1"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a2"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a3"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a4"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a5"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a6"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a7"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a8"  FontSize="30" TextColor="Black"/>
+        <Label x:Name="a9"  FontSize="30" TextColor="Black"/>
     </StackLayout>
 </ContentPage>

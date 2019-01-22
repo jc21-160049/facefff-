@@ -1,13 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xamarin.insert2"
-             Title="よく使う金額">
-    <ContentPage.Content>
+             xmlns:local="clr-namespace:Xamarin"
+             x:Class="Xamarin.insert2">
+    <ContentPage.Content Title="よく使う金額">
         <StackLayout>
-            <Label Text="よく使う金"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="よく使う金額"
+                   TextColor="Black"
+                       FontSize="40" VerticalOptions="Center"  HorizontalOptions="Center" />
+
+            <Label x:Name="ddd"
+               FontSize="35"
+               VerticalOptions="Center"></Label>
+
+            <Button x:Name="b1"
+                    Text=""></Button>
+            <Button x:Name="b2"
+                    Text=""></Button>
+            <Button x:Name="b3"
+                    Text=""></Button>
+            <Button x:Name="b4"
+                    Text=""></Button>
+            <Button x:Name="b5"
+                    Text=""></Button>
+            <Button x:Name="b6"
+                    Text=""></Button>
+            <Button x:Name="b7"
+                    Text=""></Button>
+            <Button x:Name="b8"
+                    Text=""></Button>
+            <Button x:Name="b9"
+                    Text=""></Button>
+            <Button x:Name="b10"
+                    Text=""></Button>
+            <Button x:Name="b11"
+                    Text=""></Button>
+            <Button x:Name="b12"
+                    Text=""></Button>
+
+            <StackLayout x:Name="layout" >
+
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
