@@ -17,7 +17,7 @@
             
             
             <Entry Placeholder="金額"
-                   TextColor="Yellow"
+                   TextColor="Black"
                    x:Name="money"
                FontSize="35"
                VerticalOptions="StartAndExpand"/>
