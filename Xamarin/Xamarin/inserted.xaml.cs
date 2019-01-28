@@ -26,11 +26,18 @@ namespace Xamarin
 
         public inserted (List<DateTime> dt)
 		{
-			InitializeComponent ();
-            this.dd = dt;
-            day_select.Clicked += day_selectClicked;
-            month_select.Clicked += month_selectClicked;
-            week_select.Clicked += week_selectClicked;
+            try
+            {
+                InitializeComponent();
+                this.dd = dt;
+                day_select.Clicked += day_selectClicked;
+                month_select.Clicked += month_selectClicked;
+                week_select.Clicked += week_selectClicked;
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "同じ日を連続で選ばないでください。", "OK");
+            }
         }
 
         private async void week_selectClicked(object sender, EventArgs e)
@@ -330,10 +337,10 @@ namespace Xamarin
                 //int c1;
                 foreach (var loc1 in result1)
                 {
-                    if(loc1.Name == "食料品" && loc1.Day == dd[0])
+                    if(loc1.Name == "食費" && loc1.Day == dd[0])
                     this.c1 = loc1.Spay + this.c1;
                 }
-                a1.Text = ("食料品:    \\" + this.c1);
+                a1.Text = ("食費:    \\" + this.c1);
             //var result2 = await App.Database.GetItemsAsync();
             
                 //int c2;

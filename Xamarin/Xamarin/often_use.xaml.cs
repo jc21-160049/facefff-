@@ -57,16 +57,23 @@ namespace Xamarin
 
         private void RegisterClicked(object sender, EventArgs e)
         {
-            int kin = int.Parse(tmoney.Text);
-            string s = (string)komoku1.SelectedItem;
-
-            Template item = new Template()
+            try
             {
-                Iname = s,
-                Tmoney = kin,
+                int kin = int.Parse(tmoney.Text);
+                string s = (string)komoku1.SelectedItem;
 
-            };
-            Save(item);
+                Template item = new Template()
+                {
+                    Iname = s,
+                    Tmoney = kin,
+
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "正しい値を入力してください。", "OK");
+            }
 
 
         }

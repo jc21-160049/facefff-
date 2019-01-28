@@ -16,18 +16,25 @@ namespace Xamarin
         public static List<DateTime> ddt;
         public Home()
         {
-            InitializeComponent();
-            goal1();
+            try
+            {
+                InitializeComponent();
+                goal1();
 
-        //カレンダー祝日の設定
-        calendarrr.SpecialDates = new List<SpecialDate>{
+                //カレンダー祝日の設定
+                calendarrr.SpecialDates = new List<SpecialDate>{
             new SpecialDate(DateTime.Now)
             {
                    TextColor = Color.Green, BorderColor=Color.Green,
                    BorderWidth =8, Selectable = true }
             };
 
-            //SetHoliday(DateTime.Now.Year);
+                //SetHoliday(DateTime.Now.Year);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "正しく選んでください。。", "OK");
+            }
         }
 
         public async void goal1()
@@ -212,7 +219,14 @@ namespace Xamarin
         }
         private async void OnDateClick_detail(object sender, EventArgs e)
         {
-            await this.Navigation.PushModalAsync(new inserted(calendar_detail.SelectedDates));
+            try
+            {
+                await this.Navigation.PushModalAsync(new inserted(calendar_detail.SelectedDates));
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Alert", "同じ日を連続で選ばないでください。", "OK");
+            }
         }
     }
 

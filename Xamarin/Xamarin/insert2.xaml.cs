@@ -27,6 +27,7 @@ namespace Xamarin
             ddd.Text = Home.ddt[0].ToString("日付：yyyy年MM月dd日");
             dd = Home.ddt[0].ToString("yyyy/MM/dd");
             a();
+            
             b1.Clicked += b1Clicked;
             b2.Clicked += b2Clicked;
             b3.Clicked += b3Clicked;
@@ -39,83 +40,125 @@ namespace Xamarin
             b10.Clicked += b10Clicked;
             b11.Clicked += b11Clicked;
             b12.Clicked += b12Clicked;
-
         }
 
         private void b1Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[0],
-                Spay = Tm[0],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[0],
+                    Spay = Tm[0],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b2Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[1],
-                Spay = Tm[1],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[1],
+                    Spay = Tm[1],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b3Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[2],
-                Spay = Tm[2],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[2],
+                    Spay = Tm[2],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b4Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[3],
-                Spay = Tm[3],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[3],
+                    Spay = Tm[3],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b5Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[4],
-                Spay = Tm[4],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[4],
+                    Spay = Tm[4],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b6Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[5],
-                Spay = Tm[5],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[5],
+                    Spay = Tm[5],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b7Clicked(object sender, EventArgs e)
         {
+            try {
             DateTime dt1 = DateTime.Parse(dd);
             LocationItem item = new LocationItem()
             {
@@ -124,67 +167,107 @@ namespace Xamarin
                 Day = dt1
             };
             Save(item);
+                }
+                catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
         private void b8Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[7],
-                Spay = Tm[7],
-                Day = dt1
-            };
-            Save(item);
-        }
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[7],
+                    Spay = Tm[7],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
+    }
 
         private void b9Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[8],
-                Spay = Tm[8],
-                Day = dt1
-            };
-            Save(item);
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[8],
+                    Spay = Tm[8],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
         }
 
-        private void b10Clicked(object sender, EventArgs e)
+            private void b10Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
-            {
-                Name = In[9],
-                Spay = Tm[9],
-                Day = dt1
-            };
-            Save(item);
-        }
+                try
+                {
+                    DateTime dt1 = DateTime.Parse(dd);
+                    LocationItem item = new LocationItem()
+                    {
+                        Name = In[9],
+                        Spay = Tm[9],
+                        Day = dt1
+                    };
+                    Save(item);
+                }
+                catch (Exception)
+                {
+                    DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+                }
+            }
 
         private void b11Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
-            {
-                Name = In[10],
-                Spay = Tm[10],
-                Day = dt1
-            };
-            Save(item);
-        }
+                try
+                {
+                    DateTime dt1 = DateTime.Parse(dd);
+                    LocationItem item = new LocationItem()
+                    {
+                        Name = In[10],
+                        Spay = Tm[10],
+                        Day = dt1
+                    };
+                    Save(item);
+                }
+                catch (Exception)
+                {
+                    DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+                }
+            }
 
         private void b12Clicked(object sender, EventArgs e)
         {
-            DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = In[11],
-                Spay = Tm[11],
-                Day = dt1
-            };
-            Save(item);
-        }
+                DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = In[11],
+                    Spay = Tm[11],
+                    Day = dt1
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "データがあるボタンを選択してください。", "OK");
+            }
+            }
 
         /*private void b1(object sender, EventArgs e)
         {
@@ -232,8 +315,9 @@ namespace Xamarin
                 //lay3.Children.Add(new Button() { Text = LT + " (" + location.Iname + ")" });
                 In[x] = location.Iname;
                 Tm[x] = location.Tmoney;
+                //button[roop()] = LT + " (" + location.Iname + ")";
+                button[x] = LT + " (" + location.Iname + ")";
                 x++;
-                button[roop()] = LT + " (" + location.Iname + ")";
                 //lay2.Children.Add(lay3);
                 //lay5 = lay3;
             }

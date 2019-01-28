@@ -17,37 +17,51 @@ namespace Xamarin
 
         public insert (List<DateTime> dt)
 		{
-			InitializeComponent ();
+            try
+            {
+                InitializeComponent();
 
-            aaa.Text = dt[0].ToString("日付：yyyy年MM月dd日");
-            //dd = dt[0].ToString("yyyy/MM/dd");
-            this.dd = dt[0];
+                aaa.Text = dt[0].ToString("日付：yyyy年MM月dd日");
+                //dd = dt[0].ToString("yyyy/MM/dd");
+                this.dd = dt[0];
 
-            //string1.Text = "金額：";
-            b1.Clicked += b1Clicked;
-            b2.Clicked += b2Clicked;
-            b3.Clicked += b3Clicked;
-            b4.Clicked += b4Clicked;
-            b5.Clicked += b5Clicked;
-            b6.Clicked += b6Clicked;
-            b7.Clicked += b7Clicked;
-            b8.Clicked += b8Clicked;
-            b9.Clicked += b9Clicked;
-            touroku.Clicked += tourokuClicked;
+                //string1.Text = "金額：";
+                b1.Clicked += b1Clicked;
+                b2.Clicked += b2Clicked;
+                b3.Clicked += b3Clicked;
+                b4.Clicked += b4Clicked;
+                b5.Clicked += b5Clicked;
+                b6.Clicked += b6Clicked;
+                b7.Clicked += b7Clicked;
+                b8.Clicked += b8Clicked;
+                b9.Clicked += b9Clicked;
+                touroku.Clicked += tourokuClicked;
+            }
+            catch(Exception)
+            {
+                DisplayAlert("Alert", "正しい値を入力してください。", "OK");
+            }
         }
 
         private void tourokuClicked(object sender, EventArgs e)
         {
-            int kin = int.Parse(money.Text);
-            //DateTime dt1 = DateTime.Parse(dd);
-            //DateTime dt1 = DateTime.Parse(dd);
-            LocationItem item = new LocationItem()
+            try
             {
-                Name = koumoku.Text,
-                Spay = kin,
-                Day = this.dd
-            };
-            Save(item);
+                int kin = int.Parse(money.Text);
+                //DateTime dt1 = DateTime.Parse(dd);
+                //DateTime dt1 = DateTime.Parse(dd);
+                LocationItem item = new LocationItem()
+                {
+                    Name = koumoku.Text,
+                    Spay = kin,
+                    Day = this.dd
+                };
+                Save(item);
+            }
+            catch (Exception)
+            {
+                DisplayAlert("Alert", "正しい値を入力してください。", "OK");
+            }
         }
         public async void Save(LocationItem item1)
         {

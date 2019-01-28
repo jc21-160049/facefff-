@@ -39,23 +39,30 @@ namespace Xamarin
 
         private async void tourokuClicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-            var result = await App.Database4.GetItemsAsync();
-            /*foreach (var loc in result)
+            try
             {
-                await App.Database1.DeleteItemAsync(loc);
-            }*/
-            int num;
-            string str;
-            num = int.Parse(kingaku.Text);
-            str = (string)koumoku.SelectedItem;
-            var fix = new fixed_costmoney()
+                base.OnAppearing();
+                var result = await App.Database4.GetItemsAsync();
+                /*foreach (var loc in result)
+                {
+                    await App.Database1.DeleteItemAsync(loc);
+                }*/
+                int num;
+                string str;
+                num = int.Parse(kingaku.Text);
+                str = (string)koumoku.SelectedItem;
+                var fix = new fixed_costmoney()
+                {
+                    Spay = num,
+                    cate = str
+                };
+                Save(fix);
+                //await DisplayAlert("登録しました","OK","");
+            }
+            catch (Exception)
             {
-                Spay = num,
-                cate = str
-            };
-            Save(fix);
-            //await DisplayAlert("登録しました","OK","");
+                DisplayAlert("Alert", "正しい値を入力してください。", "OK");
+            }
         }
 
         public async void Save(fixed_costmoney item1)

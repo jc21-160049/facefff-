@@ -14,8 +14,8 @@
                    TextColor="Black"
                FontSize="35"
                VerticalOptions="Start"></Label>
-            
-            
+
+
             <Entry Placeholder="金額"
                    TextColor="Black"
                    x:Name="money"
@@ -88,6 +88,7 @@
 
         </StackLayout>
     </ContentPage>
+
 
     <local:insert2/>
 

@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Xamarin"
-             x:Class="Xamarin.insert2">
-    <ContentPage.Content Title="よく使う金額">
+             x:Class="Xamarin.insert2"
+             Title="よく使う金額">
+    <ContentPage.Content>
         <StackLayout>
             <Label Text="よく使う金額"
                    TextColor="Black"

@@ -21,29 +21,36 @@ namespace Xamarin
         }
         private async void tourokuClicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-            var result = await App.Database3.GetItemsAsync();
-            var result2 = await App.Database4.GetItemsAsync();
-            int goukei = 0;
-            foreach (var loc in result)
+            try
             {
-                await App.Database3.DeleteItemAsync(loc);
-            }
-            int kin = int.Parse(money.Text);
+                base.OnAppearing();
+                var result = await App.Database3.GetItemsAsync();
+                var result2 = await App.Database4.GetItemsAsync();
+                int goukei = 0;
+                foreach (var loc in result)
+                {
+                    await App.Database3.DeleteItemAsync(loc);
+                }
+                int kin = int.Parse(money.Text);
 
-            foreach(var loc1 in result2)
-            {
-                goukei = loc1.Spay + goukei;
-            }
+                foreach (var loc1 in result2)
+                {
+                    goukei = loc1.Spay + goukei;
+                }
 
-            goukei = kin - goukei;
-            //DateTime dt1 = DateTime.Parse(dd);
-            //DateTime dt1 = DateTime.Parse(dd);
-            salarymoney item = new salarymoney()
+                goukei = kin - goukei;
+                //DateTime dt1 = DateTime.Parse(dd);
+                //DateTime dt1 = DateTime.Parse(dd);
+                salarymoney item = new salarymoney()
+                {
+                    Spay = goukei,
+                };
+                Save(item);
+            }
+            catch (Exception)
             {
-                Spay = goukei,
-            };
-            Save(item);
+                DisplayAlert("Alert", "正しい値を入力してください。", "OK");
+            }
         }
         public async void Save(salarymoney item)
         {
