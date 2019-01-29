@@ -134,19 +134,29 @@ namespace Xamarin
         //カレンダー日付クリック
         private async void OnDateClick(object sender, EventArgs e)
         {
-            /*base.OnAppearing();
-            List<LocationItem> result = await App.Database.GetItemDay(calendarrr.SelectedDates);
-            int x = result.Count;
-            if (x == 0)
+            try
             {
-                await this.Navigation.PushModalAsync(new insert2(calendarrr.SelectedDates));
+                /*base.OnAppearing();
+                List<LocationItem> result = await App.Database.GetItemDay(calendarrr.SelectedDates);
+                int x = result.Count;
+                if (x == 0)
+                {
+                    await this.Navigation.PushModalAsync(new insert2(calendarrr.SelectedDates));
+                }
+                else
+                {*/
+                //await this.Navigation.PushModalAsync(new inserted(calendarrr.SelectedDates));
+                 var t = calendarrr.SelectedDates;
+                if (t.Count != 0) {
+                    Home.ddt = t;
+                    await this.Navigation.PushModalAsync(new insert(Home.ddt));
+                }
+                /*}*/
             }
-            else
-            {*/
-            //await this.Navigation.PushModalAsync(new inserted(calendarrr.SelectedDates));
-            Home.ddt = calendarrr.SelectedDates;
-            await this.Navigation.PushModalAsync(new insert(calendarrr.SelectedDates));
-            /*}*/
+            catch (Exception)
+            {
+               await DisplayAlert("Alert", "同じ日を連続で選ばないでください。", "OK");
+            }
         }
 
         //設定画面ボタンの画面遷移
@@ -221,7 +231,13 @@ namespace Xamarin
         {
             try
             {
-                await this.Navigation.PushModalAsync(new inserted(calendar_detail.SelectedDates));
+                var t = calendar_detail.SelectedDates;
+                if (t.Count != 0)
+                {
+                    Home.ddt = t;
+                    await this.Navigation.PushModalAsync(new inserted(calendar_detail.SelectedDates));
+                }
+                //await this.Navigation.PushModalAsync(new inserted(calendar_detail.SelectedDates));
             }
             catch (Exception)
             {

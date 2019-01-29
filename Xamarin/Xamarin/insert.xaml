@@ -30,17 +30,17 @@
                 <Button Text="食費"
                     FontSize="25"
                     HorizontalOptions="Start"
-                    WidthRequest="150"
+                        WidthRequest="150"
                     x:Name="b1"/>
                 <Button Text="日用品"
                     FontSize="25"
                     HorizontalOptions="End"
-                    WidthRequest="150"
+                        WidthRequest="150"
                     x:Name="b2"/>
                 <Button Text="交通費"
                     FontSize="25"
                     HorizontalOptions="End"
-                    WidthRequest="150"
+                        WidthRequest="150"
                     x:Name="b3"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal"

@@ -19,7 +19,7 @@
         <Button Text="1month" HorizontalOptions="Center" x:Name="month_select"/>
         </StackLayout>
 
-        <Label Text="総額(\)"
+        <Label Text="総額(円)"
                    FontSize="35"
                    VerticalOptions="CenterAndExpand" TextColor="Black"></Label>
         <Label x:Name="a1"  FontSize="30" TextColor="Black"/>
