@@ -79,12 +79,56 @@ namespace Xamarin
             }
             //num5 = result3[0].goalmoney;
             //num2 = income1.incomemoney;
-            double num3 = num2 - num1;
+            double num3 = num2 - num1 - num5;
+            string s3;
             string s1 = ("今月使った金額は" + num1 + "円です");
-            string s3 = ("今月使える金額は" + num3 + "円です");
-            double num4 = ((double)num5 / num3)*100;
+            if (num3 < 0)
+            {
+                s3 = ("このままだと目標金額を\n" + -num3 + "円オーバーしてしまいます。");
+            }
+            else
+            {
+                s3 = ("今月使える金額は" + num3 + "円です");
+            }
+            //double num4 = ((double)num5 / num3)*100;
+            //num4 = Math.Round(num4, 2);
+            int iDaysInMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            int Daya = DateTime.Now.Day;
+            double num4 = num1 / Daya;
+            num4 = num4 * iDaysInMonth;
+            num4 = num2 - num4;
+            num4 = num4 / num5;
+            
+            num4 = num4 * 100;
             num4 = Math.Round(num4, 2);
-            string s2 = ("目標金額の割合" + num4 + "%");
+            string s2;
+            if(num4 > 100)
+            {
+                s2 = ("目標金額との割合100%");
+                goaltext.Text = "このペースでいくと今月末には\n目標金額を達成します。";
+            }
+            else if (num4 < 0) {
+                s2 = ("目標金額との割合0%");
+                goaltext.Text = "節約しないと、\nこのままだと貯金できませんよ。";
+            }
+            else
+            {
+                s2 = ("目標金額の割合" + num4 + "%");
+                goaltext.Text = "もう少し節約して、\n目標金額の達成を目指しましょう。";
+            }
+            
+           /* if (num1 != 0)
+            {
+                double num4 = (num2 - num1) / (iDaysInMonth - Daya);
+                num4 = num4 / num2;
+                num4 = Math.Round(num4, 2);
+                num4 = num4 * 100;
+                s2 = ("目標金額の割合" + num4 + "%");
+            }
+            else
+            {
+                s2 = ("目標金額の割合0%");
+            }*/
             usedmoney.Text = s1;
             ableuse.Text = s3;
             goal.Text = s2;

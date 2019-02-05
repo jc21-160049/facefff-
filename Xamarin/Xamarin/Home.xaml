@@ -20,6 +20,10 @@
                    TextColor="BlueViolet"
                    FontSize="Large"
                    HorizontalOptions="Center"/>
+            <Label x:Name="goaltext"
+                   TextColor="Black"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
             <controls:Calendar x:Name="calendarrr"
                            Padding="10,50,10,0" 
                            StartDay="Sunday" 
