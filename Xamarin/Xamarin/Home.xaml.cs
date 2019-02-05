@@ -55,7 +55,6 @@ namespace Xamarin
             //int spend = 0;
             base.OnAppearing();
             var result1 = await App.Database.GetItemsAsync();
-            var result2 = await App.Database2.GetItemsAsync();
             var result3 = await App.Database1.GetItemsAsync();
             var result4 = await App.Database3.GetItemsAsync();
             foreach (var loc1 in result1)
@@ -204,20 +203,12 @@ namespace Xamarin
         }
 
         //設定画面ボタンの画面遷移
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await this.Navigation.PushModalAsync(new notification());
-        }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
             await this.Navigation.PushModalAsync(new often_use());
         }
 
-        private async void Button_Clicked_2(object sender, EventArgs e)
-        {
-            await this.Navigation.PushModalAsync(new fixed_cost());
-        }
         private async void Button_Clicked_3(object seder, EventArgs e)
         {
             await this.Navigation.PushModalAsync(new goal_money());
@@ -230,9 +221,7 @@ namespace Xamarin
         {
             var result1 = await App.Database.GetItemsAsync();
             var result2 = await App.Database1.GetItemsAsync();
-            var result3 = await App.Database2.GetItemsAsync();
             var result4 = await App.Database3.GetItemsAsync();
-            var result5 = await App.Database4.GetItemsAsync();
             var result6 = await App.Database5.GetItemsAsync();
 
             foreach(var loc in result1)
@@ -245,19 +234,9 @@ namespace Xamarin
                 await App.Database1.DeleteItemAsync(loc);
             }
 
-            foreach (var loc in result3)
-            {
-                await App.Database2.DeleteItemAsync(loc);
-            }
-
             foreach (var loc in result4)
             {
                 await App.Database3.DeleteItemAsync(loc);
-            }
-
-            foreach (var loc in result5)
-            {
-                await App.Database4.DeleteItemAsync(loc);
             }
 
             foreach (var loc in result6)

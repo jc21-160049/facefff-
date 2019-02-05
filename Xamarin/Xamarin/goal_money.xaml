@@ -4,15 +4,19 @@
              x:Class="Xamarin.goal_money">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <Label Text="貯めたい目標金額を設定"
+            <Label Text="貯めたい目標金額を設定"
+                       FontSize="25"
+                   TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Entry Placeholder="金額"
+                       FontSize="35"
+                       VerticalOptions="StartAndExpand"
                        x:Name="kingaku"/>
-                <Button x:Name="touroku"
+            <Button x:Name="touroku"
+                        WidthRequest="400"
+                        FontSize="35"
                         Text="登録する"/>
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

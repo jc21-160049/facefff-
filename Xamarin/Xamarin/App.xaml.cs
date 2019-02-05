@@ -32,9 +32,7 @@ namespace Xamarin
         }
         static LocationItemDatabase database;
         static goalmoney1Database database1;
-        static incomeDatabase database2;
         static salarymoneyDatabase database3;
-        static fixed_costDatabase database4;
         static TemplateDatabase database5;
 
         public static LocationItemDatabase Database
@@ -65,20 +63,6 @@ namespace Xamarin
             }
         }
 
-        public static incomeDatabase Database2
-        {
-            get
-            {
-                if (database2 == null)
-                {
-                    String ss = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                    String s = Path.Combine(ss, "LocationSQLite.db6");
-                    database2 = new incomeDatabase(s);
-                }
-                return database2;
-            }
-        }
-
         public static salarymoneyDatabase Database3
         {
             get
@@ -93,19 +77,6 @@ namespace Xamarin
             }
         }
 
-        public static fixed_costDatabase Database4
-        {
-            get
-            {
-                if (database4 == null)
-                {
-                    String ss = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                    String s = Path.Combine(ss, "LocationSQLite.db7");
-                    database4 = new fixed_costDatabase(s);
-                }
-                return database4;
-            }
-        }
 
         public static TemplateDatabase Database5
         {

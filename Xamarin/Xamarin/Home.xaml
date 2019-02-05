@@ -61,8 +61,6 @@
             <Label Text="設定画面" />
             <Button Text="よく使う金額設定" 
                         Clicked="Button_Clicked_1"/>
-            <Button Text="固定費引き落とし設定"
-                        Clicked="Button_Clicked_2"/>
             <Button Text="目標金額設定"
                     Clicked="Button_Clicked_3"/>
             <Button Text="給料設定"

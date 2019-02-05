@@ -25,18 +25,12 @@ namespace Xamarin
             {
                 base.OnAppearing();
                 var result = await App.Database3.GetItemsAsync();
-                var result2 = await App.Database4.GetItemsAsync();
                 int goukei = 0;
                 foreach (var loc in result)
                 {
                     await App.Database3.DeleteItemAsync(loc);
                 }
                 int kin = int.Parse(money.Text);
-
-                foreach (var loc1 in result2)
-                {
-                    goukei = loc1.Spay + goukei;
-                }
 
                 goukei = kin - goukei;
                 //DateTime dt1 = DateTime.Parse(dd);
